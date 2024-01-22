@@ -3,7 +3,8 @@ create table ORDERS(
     data varchar,
     customer_id int,
     product_name varchar,
-    amount int
+    amount int,
+    FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(id)
 );
 
 insert into ORDERS (data, customer_id, product_name, amount)
